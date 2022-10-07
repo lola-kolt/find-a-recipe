@@ -45,7 +45,7 @@ function App() {
 
       <div className='container'>
         <form className='flex' onSubmit={ finalSearch }>
-          <input type="text" placeholder='Search...' className='inputField' onChange={ myRecipeSearch } value={ mySearch }/>
+          <input type="text" placeholder='Type a product...' className='inputField' onChange={ myRecipeSearch } value={ mySearch }/>
           <button className='btn'>
             <img src={ searchIcon } alt="searchIcon" width="32px" />
           </button>
