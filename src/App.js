@@ -24,7 +24,6 @@ function App() {
   }, [wordSubmitted])
 
   const myRecipeSearch =(e) => {
-    console.log(e.target.value)
     setMySearch(e.target.value);
   }
 
@@ -52,15 +51,18 @@ function App() {
         </form>
       </div>
 
-      {myRecipes.map(element => (
-        <MyRecipesComponent
-        id={ element.id }
-        label={ element.recipe.label }
-        cuisineType={ element.recipe.cuisineType }
-        image={ element.recipe.image }
-        calories= { element.recipe.calories}
-        ingredients={ element.recipe.ingredientLines } />
-      ))}
+      <div>
+        {myRecipes.map((element, id) => (
+          <MyRecipesComponent
+          key={ id }
+          id={ element.id }
+          label={ element.recipe.label }
+          cuisineType={ element.recipe.cuisineType }
+          image={ element.recipe.image }
+          calories= { element.recipe.calories}
+          ingredients={ element.recipe.ingredientLines } />
+        ))}
+      </div>
     </div>
   );
 }

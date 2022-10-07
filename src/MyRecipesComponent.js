@@ -1,7 +1,6 @@
 import checkIcon from './check.png';
 
 function MyRecipesComponent({ id, label, cuisineType, image, calories, ingredients }) {
-console.log()
     return(
         <div key={ id }>
             <div className="flex">
@@ -18,8 +17,8 @@ console.log()
             </div>
             <ul className="list">
                 <div className='ingredient-item'>
-                {ingredients.map(ingredient => (
-                    <li>
+                {ingredients.map((ingredient, id) => (
+                    <li key={id}>
                         <img src={checkIcon} alt="check" className='icon' />
                         {ingredient}
                     </li>
